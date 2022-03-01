@@ -1,0 +1,18 @@
+{
+  "params":
+  {
+      "local_server":"True",
+      "local_uri": "mysql+pymysql://root:@localhost/strokepred",
+      "prod_uri": "mysql+pymysql://root:@localhost/strokepred",
+      "fb_url":"https://facebook.com/strokeX",
+      "tw_url":"https://twitter.com/strokeX",
+      "gh_url":"https://github.com/strokeX",
+      "gmail-user":"strokeX12@gmail.com",
+      "gmail-password":"Stroke_pred",
+      "no_of_posts": 2 ,
+      "admin-user":"Shaw7391",
+      "admin-password":"Rahul@123",
+      "upload_location":"C:\\Users\\Rahul\\Desktop\\Stroke\\static"
+      
+  }  
+}

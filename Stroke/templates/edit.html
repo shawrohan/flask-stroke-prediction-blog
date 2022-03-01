@@ -1,0 +1,80 @@
+{% extends "layout.html" %}
+{% block body %}
+                        <!-- Page Header-->
+                        <header class="masthead" style="background-image: url('{{url_for('static', filename='images/brain.jpg')}}')">
+                            <div class="container position-relative px-4 px-lg-5">
+                                <div class="row gx-4 gx-lg-5 justify-content-center">
+                                    <div class="col-md-10 col-lg-8 col-xl-7">
+                                        <div class="site-heading">
+                                            <h1>Admin Panel</h1>
+                                            <span class="subheading">Edit your posts here</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+                        <!-- Main Content-->
+                        <div class="container px-4 px-lg-5">
+                            <div class="row gx-4 gx-lg-5 justify-content-center">
+                                <div class="col-md-10 col-lg-8 col-xl-7">
+                                    <h1>Basic Action</h1>
+
+                                    <button class="btn btn-primary"><a href="/dashboard">Dashboard</a></button>
+                                    <button class="btn btn-primary"><a href="/logout">Logout</a></button>
+                                    <hr>
+                        <h1>add/Edit posts</h1>
+                        <form id="contactForm" action="/edit/{{post.sno}}" method="POST" novalidate>
+                        <div class="form-floating">
+                            <input class="form-control" name="title" id="title" type="text" placeholder="Enter title..."  value="{{post.title}}" required />
+                            <label for="name">Title</label>
+                            
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" name="tline" id="tline" type="text" placeholder="Enter tagline" value="{{post.tagline}}" required/>
+                            <label for="email">Tagline</label>
+                           
+                        </div>
+                        <div class="form-floating">
+                            <input class="form-control" name="slug" id="slug" type="text" placeholder="Enter your phone number..."  value="{{post.slug}}" required />
+                            <label for="phone">Slug</label>
+                            
+                        </div>
+                        <div class="form-floating">
+                            <textarea class="form-control" name="content" id="content" placeholder="Enter Content..." style="height: 12rem"  required>{{post.content}}</textarea>
+                            <label for="content">Content</label>
+                            
+                        </div>
+                        
+                        <div class="form-floating">
+                            <input class="form-control" name="img_file" id="img_file" type="text" placeholder="Enter image filename..."  value="{{post.img_file}}" required />
+                            <label for="phone">Image File</label>
+                            
+                        </div>
+                        <br />
+                        
+                        <div class="container-contact100-form-btn">
+                            <div class="wrap-contact100-form-btn">
+                                <div class="contact100-form-bgbtn"></div>
+                                <button class="contact100-form-btn">
+                                    Send Email
+                                </button>
+                            </div>
+                        </div>  
+                        </div>
+                        
+                        
+                        <!-- Submit Button-->
+                       
+                       
+                    </form>
+                                    
+                                    
+                                    </div>
+                            </div>
+                        </div>
+                {% endblock %}
+          
+                   
+                    
+                    
+              

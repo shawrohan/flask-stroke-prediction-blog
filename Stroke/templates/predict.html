@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Page Header-->
+<style>
+    fieldset{
+    background-color: white;
+    border:none;
+}
+
+legend {
+    background-color: rgb(201, 192, 192);
+    color: white;
+    padding: 5px 10px;
+    display: block;
+} 
+
+form {
+    margin: auto;
+    width: 45%;
+    border: solid ;
+}
+
+.result {
+    margin: auto;
+    width: 45%;
+    border: 1px solid rgb(182, 165, 165);
+}
+</style>
+
+<header class="masthead" style="background-image: url('{{url_for('static', filename='images/predict.jpg')}}')">
+    <div class="container position-relative px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 justify-content-center">
+            <div class="col-md-10 col-lg-8 col-xl-7">
+                <div class="page-heading">
+                    <h1>Predict</h1>
+                    <span class="subheading">Are you safe or not</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<br>
+         <form action="{{ url_for('predict') }}" method="POST">
+            <fieldset>
+                <legend>Predict Here:</legend>
+                <p>Please select your gender:</p>
+                <input name="gender" type="radio" value="1" id="male" required>
+                <label for="male">Male</label>
+                <input name="gender" type="radio" value="0" id="female" required>
+                <label for="female">Female</label>
+                <br>
+                <br> age:
+                <input name="age" type="number" required><br>
+                <br>
+                <p>Do you Suffer from hypertension:</p>
+                <input name="hypertension" type="radio" value="1" id="yes" required>
+                <label for="yes">Yes</label>
+                <input name="hypertension" type="radio" value="0" id="no" required>
+                <label for="no">No</label><br>
+                <br>
+                <p>Do you Suffer from any heart disease:</p>
+                <input name="heart_disease" type="radio" value="1" id="yes" required>
+                <label for="yes">Yes</label>
+                <input name="heart_disease" type="radio" value="0" id="no" required>
+                <label for="no">No</label><br>
+                <br>
+                <p>Are you married:</p>
+                <input name="ever_married" type="radio" value="1" id="yes" required>
+                <label for="yes">Yes</label>
+                <input name="ever_married" type="radio" value="0" id="no" required>
+                <label for="no">No</label><br>
+                <br>
+                <p>in which area you live:</p>
+                <input name="residence_type" type="radio" value="1" id="yes" required>
+                <label for="yes">Urban</label>
+                <input name="residence_type" type="radio" value="0" id="no" required>
+                <label for="no">Rural</label><br>
+                <br>
+                <br> avg_glucode_level:
+                <input name="avg_glucose_level" type="number" required>
+                <br>
+                <br> bmi:
+                <input name="bmi" type="number" required>
+                <br>
+                <p>Do you smoke:</p>
+                <input name="smoking_status" type="radio" value="1" id="yes" required>
+                <label for="yes">Smoked</label>
+                <input name="smoking_status" type="radio" value="0" id="no" required>
+                <label for="no">Never smoked</label><br>
+                <br>
+                <br>
+                <input type="submit">
+            </fieldset>
+        </form> 
+        <br>
+        <div class="result" align="center">
+            
+                
+                <br>
+                <br> Stroke prediction results:
+                   <p style="font-size:50px">{{ result }}</p>
+            
+        </div>  
+
+{% endblock %}

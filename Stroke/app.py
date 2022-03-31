@@ -53,6 +53,11 @@ class Posts(db.Model):
     tagline = db.Column(db.String(80), unique=True, nullable=False)
     slug = db.Column(db.String(25), unique=True, nullable=False)
     content = db.Column(db.String(200), unique=True, nullable=False)
+    content1 = db.Column(db.String(200), unique=True)
+    content2 = db.Column(db.String(200), unique=True)
+    content3 = db.Column(db.String(200), unique=True)
+    content4 = db.Column(db.String(200), unique=True)
+    content5 = db.Column(db.String(200), unique=True)
     img_file = db.Column(db.String(15), unique=True)
     date = db.Column(db.String(12), unique=True)
 

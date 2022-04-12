@@ -65,6 +65,11 @@ CREATE TABLE `posts` (
   `tagline` text NOT NULL,
   `slug` varchar(25) NOT NULL,
   `content` text NOT NULL,
+  `content2` text NOT NULL,
+  `content3` text NOT NULL,
+  `content4` text NOT NULL,
+  `content5` text NOT NULL,
+  `content6` text NOT NULL,
   `img_file` varchar(15) NOT NULL,
   `date` datetime DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -73,7 +78,7 @@ CREATE TABLE `posts` (
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`sno`, `title`, `tagline`, `slug`, `content`, `img_file`, `date`) VALUES
+INSERT INTO `posts` (`sno`, `title`, `tagline`, `slug`, `content`,`img_file`, `date`) VALUES
 (1, 'Brain Anatomy', 'and How the Brain Works', 'first-post', 'What is the brain?\r\nThe brain is a complex organ that controls thought, memory, emotion, touch, motor skills, vision, breathing, temperature, hunger and every process that regulates our body. Together, the brain and spinal cord that extends from it make up the central nervous system, or CNS.', 'post-bg.jpg', '2022-02-28 12:06:02'),
 (2, 'About Stroke', 'A stroke, sometimes called a brain attack', 'second-post', 'A stroke, sometimes called a brain attack, occurs when something blocks blood supply to part of the brain or when a blood vessel in the brain bursts. In either case, parts of the brain become damaged or die. A stroke can cause lasting brain damage, long-term disability, or even death.\r\n \r\nLearn more about what causes stroke and what happens during a stroke. Helllllo worldddd', '', '2022-02-28 18:29:08'),
 (3, 'new post here', 'new post', 'abcd', 'hello new post here', 'abc', '2022-02-28 17:26:38'),
